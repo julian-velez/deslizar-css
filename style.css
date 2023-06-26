@@ -1,0 +1,93 @@
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 290px;
+  
+}
+
+.diagonal-container {
+  position: relative;
+  display: inline-block;
+}
+
+.diagonal-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 75%), linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.3) 75%);
+  background-size: 10px 10px;
+  pointer-events: none;
+}
+
+.diagonal-container img {
+  display: block;
+  max-width: 100%;
+  width: 300px; /* Cambia este valor al tamaño deseado */
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.diagonal-container img:hover {
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+
+.diagonal-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*background-color: #333; /* Cambia el fondo a un tono gris oscuro */
+}
+
+.diagonal-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(200, 200, 200, 0.3) 25%, transparent 25%, transparent 75%, rgba(200, 200, 200, 0.3) 75%), linear-gradient(-45deg, rgba(200, 200, 200, 0.3) 25%, transparent 25%, transparent 75%, rgba(200, 200, 200, 0.3) 75%);
+  background-size: 10px 10px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.diagonal-container img {
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.diagonal-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background-color: black;
+}
+
+.diagonal-container img {
+  display: block;
+  max-width: 100%;
+  width: 300px;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: slideAnimation 4s infinite alternate;
+}
+
+@keyframes slideAnimation {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
